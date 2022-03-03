@@ -17,5 +17,9 @@ const searchName = (value) => {
     cityName("temparature", value.main.temp);
     cityName("clouds", value.weather[0].main);
 
+    // set image icon attribute
+    const url = ` http://openweathermap.org/img/wn/${value.weather[0].icon}@2x.png`;
+    const iconSet = document.getElementById("icon-img");
+    iconSet.setAttribute("src", url);
 }
 
